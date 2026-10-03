@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>فروشگاه Amir48</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="#">Amir48</a>
+    <div class="search"><span>⌕</span><input id="searchInput" placeholder="جست‌وجوی محصول..." /></div>
+    <button class="location">📍 انتخاب آدرس</button>
+    <button class="account" id="accountBtn">👤 ورود / ثبت‌نام</button>
+    <button class="cart-btn" id="cartBtn">🛒 سبد خرید <b id="cartCount">۰</b></button>
+  </div>
+</header>
+
+<div class="categories">
+  <div class="container cat-row">
+    <a href="#products">همه محصولات</a>
+    <a href="#products">مواد غذایی</a>
+    <a href="#products">برنج و حبوبات</a>
+    <a href="#products">کنسرو و غذای آماده</a>
+    <a href="#products">صبحانه</a>
+    <a href="#products">تخفیف‌ها</a>
+  </div>
+</div>
+
+<main>
+<section class="hero container">
+  <div>
+    <small>خرید روزانه، ساده و سریع</small>
+    <h1>خرید محصولات سوپرمارکتی<br>با چند کلیک</h1>
+    <p>محصولات مورد نیازت را انتخاب کن و سفارش را در سبد خرید ثبت کن.</p>
+    <a class="primary" href="#products">مشاهده محصولات</a>
+  </div>
+  <div class="hero-art">🛒<br><span>خرید آسان</span></div>
+</section>
+
+<section class="container">
+  <div class="section-head">
+    <h2>پیشنهادهای امروز</h2>
+    <span id="resultCount"></span>
+  </div>
+  <div class="products" id="products"></div>
+</section>
+</main>
+
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer">
+  <div class="drawer-head"><h2>سبد خرید</h2><button id="closeCart">×</button></div>
+  <div id="cartItems"></div>
+  <div class="checkout">
+    <div><span>جمع سبد</span><strong id="total">۰ تومان</strong></div>
+    <button class="primary wide" id="checkoutBtn">ادامه و ثبت سفارش</button>
+  </div>
+</aside>
+
+<div class="modal" id="modal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeModal">×</button>
+    <h2>ورود به حساب</h2>
+    <p>شماره موبایل خود را وارد کنید.</p>
+    <input class="modal-input" placeholder="مثلاً ۰۹۱۲۱۲۳۴۵۶۷">
+    <button class="primary wide" id="loginBtn">ادامه</button>
+    <small>در نسخه‌ی نمایشی، ورود واقعی به سرور انجام نمی‌شود.</small>
+  </div>
+</div>
+
+<footer><div class="container"><b>Amir48</b><span>فروشگاه اینترنتی محصولات روزمره</span></div></footer>
+<script src="app.js"></script>
+</body>
+</html>
