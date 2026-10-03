@@ -111,4 +111,34 @@ function renderCart() {
   if (ids.length) {
     cartItems.innerHTML = ids.map(id => {
       const product = products.find(p => p.id == id);
-      const quantity
+      const const quantity = cart[id];
+
+if (!product) return "";
+
+total += product.price * quantity;
+
+return `
+  <div class="cart-item">
+    <div>
+      <strong>${product.icon} ${product.name}</strong>
+      <small>${toman(product.price)}</small>
+    </div>
+    <div class="qty">
+      <button onclick="changeQuantity(${id}, -1)">−</button>
+      <span>${quantity}</span>
+      <button onclick="changeQuantity(${id}, 1)">+</button>
+    </div>
+  </div>
+`;
+}).join("");
+} else {
+  cartItems.innerHTML = "<p>سبد خرید خالی است.</p>";
+}
+
+if (totalEl) {
+  totalEl.textContent = toman(total);
+}
+}
+
+renderProducts();
+renderCart();
