@@ -111,7 +111,7 @@ function renderCart() {
   if (ids.length) {
     cartItems.innerHTML = ids.map(id => {
       const product = products.find(p => p.id == id);
-      const const quantity = cart[id];
+      const quantity = cart[id];
 
 if (!product) return "";
 
